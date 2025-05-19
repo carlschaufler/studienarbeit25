@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lieferband Ergebnisse</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <main id="content">
+        <h1 id="headline">Lieferband Lifefeed</h1>
+        <p id="mode">{{ mode }}</p>
+        <img id="video" src="{{ url_for('video_feed') }}">
+        <div id="btnContainer">
+            <button class="btn" id="modeBtn" onclick="swapMode()">Modus wechseln</button>
+            <button class="btn" id="forward" onclick="forward()">&#8595;</button>
+            <button class="btn" id="backward" onclick="backward()">&#8593;</button>
+        </div>
+    </main>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
